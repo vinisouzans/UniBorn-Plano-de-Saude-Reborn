@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.cartao {
+    background: #18995E; /* Cor do interior da carteirinha */
+    color: white; /* Cor do texto */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centraliza o texto por padrão */
+    width: 360px; /* Largura do cartão */
+    height: 220px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 5px 0 15px 0; /* Ajustando a margem superior para 5px */
+    text-align: left; /* Alinha o texto à esquerda */
+    display: flex; /* Permite que a imagem e o texto fiquem na mesma linha */
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+}
+
+.logo {
+    height: 40px; /* Ajuste a altura da imagem conforme necessário */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+    max-height: 30px;
+}
+
+p {
+    margin: 1px 0;
+    font-size: 20px;
+    text-align: left;
+}
+
+.cabecalho{
+    font-size: 10px;
+    margin: 1px 0;
+    text-align: left;
+    color: black;
+}
+
+.linha-separadora {
+    border: none; /* Remove a borda padrão */
+    height: 2px; /* Altura da linha */
+    background-color: white; /* Cor da linha */
+    margin: 10px 0; /* Margem acima e abaixo da linha */
+}
+
+
+#btnImprimir {
+    margin-top: 55px;
+    padding: 10px 15px;
+    background-color: #fff; /* Cor do botão */
+    color: #18995E; /* Cor do texto do botão */
+    border: 0.5px solid #18995E; /* Borda sólida de 0.5px na cor #18995E */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnImprimir:hover {
+    background-color: #e0e0e0; /* Cor ao passar o mouse */
+}
+
+/* Estilos para impressão */
+@media print {
+    body {
+        background-color: white; /* Cor de fundo da página durante a impressão */
+    }
+
+    .cartao {
+        background-color: #18995E; /* A cor de fundo da carteirinha */
+        -webkit-print-color-adjust: exact; /* Para garantir que a cor de fundo seja impressa */
+        print-color-adjust: exact; /* Para garantir que a cor de fundo seja impressa */
+    }
+
+    #btnImprimir {
+        display: none; /* Oculta o botão de impressão ao imprimir */
+    }
+}
+
+
+
+/* Estilos do modal */
+.modal {
+    display: flex; /* Oculta o modal por padrão */
+    position: fixed; /* Fixa no centro da tela */
+    z-index: 1; /* Fica na frente */
+    left: 0;
+    top: 0;
+    width: 60%; /* Largura total */
+    height: 60%; /* Altura total */
+    overflow: auto; /* Habilita scroll se necessário */
+    background-color: rgb(0,0,0); /* Fundo preto */
+    background-color: rgba(0,0,0,0.4); /* Fundo com opacidade */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% da parte superior e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+

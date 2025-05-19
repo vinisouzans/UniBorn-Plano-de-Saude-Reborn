@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>UniBorn - Plano de Saúde Reborn</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="unimed-rio-logo.PNG" alt="Logo Unimed" class="logo">
+            UniBorn
+        </h1>
+        <h1>Plano de Saúde Reborn</h1>
+        <form id="rebornForm">
+            <label for="nome">Nome do Bebê Reborn:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="dataCompra">Data de Compra do Bebê Reborn:</label>
+            <input type="date" id="dataCompra" name="dataCompra" required>
+
+            <label for="sexo">Sexo do Bebê Reborn:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="">Escolha o sexo</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="feedback" class="hidden"></div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
